@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Eduardo/Documents/New Folder/simulation/qsim
+Ecpu_ek
+Z1 w1646776398
+Z2 DPx7 arriaii 17 arriaii_atom_pack 0 22 BkNkn^PYYG5b8:cI=<<>a1
+Z3 DPx7 arriaii 18 arriaii_components 0 22 doPjh8LaRbJo??CgGHiBG1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 58
+R0
+Z10 8CPU_EK.vho
+Z11 FCPU_EK.vho
+l0
+L37 1
+VYk8l7=J5bA9;joYn>7ETk2
+!s100 Ekl0OI`76nmoZW6jYO>la2
+Z12 OV;C;2020.1;71
+32
+Z13 !s110 1646776399
+!i10b 1
+Z14 !s108 1646776399.000000
+Z15 !s90 -work|work|CPU_EK.vho|
+Z16 !s107 CPU_EK.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 6 cpu_ek 0 22 Yk8l7=J5bA9;joYn>7ETk2
+!i122 58
+l283
+L55 2604
+VfkA`]B;anD[R7@d`2za2>0
+!s100 U?^>SU]zzMELWDE696Jh32
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ecpu_ek_vhd_vec_tst
+Z19 w1646776397
+R7
+R8
+!i122 59
+R0
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
+l0
+Z22 L32 1
+V@ZCd;Pmnc_AjQ3`TnbYoi3
+!s100 looWDXfVBjEDj]:]?>Q:d3
+R12
+32
+R13
+!i10b 1
+R14
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Acpu_ek_arch
+R7
+R8
+Z25 DEx4 work 18 cpu_ek_vhd_vec_tst 0 22 @ZCd;Pmnc_AjQ3`TnbYoi3
+!i122 59
+l67
+Z26 L34 64
+Z27 V?`Bg2_kHB@>mDeCVHBaLm3
+Z28 !s100 gCI2G^BS9_5h3CgeOoC@;2
+R12
+32
+R13
+!i10b 1
+R14
+R23
+R24
+!i113 1
+R17
+R18
+Emux_2x1
+Z29 w1646752428
+R4
+R2
+R6
+R7
+R8
+R3
+!i122 6
+R0
+R10
+R11
+l0
+L35 1
+VL?@Jz9ioGB;fZKE=]H9o80
+!s100 Bn2hjnA=j^;GA1zhEPbD@2
+R12
+32
+Z30 !s110 1646752429
+!i10b 1
+Z31 !s108 1646752429.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 7 mux_2x1 0 22 L?@Jz9ioGB;fZKE=]H9o80
+!i122 6
+l137
+L72 527
+V80n5hL6iG:XmV5`JZl2GO2
+!s100 :f3OLFk`ZdeeV5_i2OJgC1
+R12
+32
+R30
+!i10b 1
+R31
+R15
+R16
+!i113 1
+R17
+R18
+Emux_2x1_vhd_vec_tst
+Z32 w1646752427
+R7
+R8
+!i122 7
+R0
+Z33 8Waveform1.vwf.vht
+Z34 FWaveform1.vwf.vht
+l0
+R22
+VWEhhc8h:Z:VeMecS6AVf80
+!s100 @E0h<mQUi13E6ic9h;jYc2
+R12
+32
+R30
+!i10b 1
+R31
+Z35 !s90 -work|work|Waveform1.vwf.vht|
+Z36 !s107 Waveform1.vwf.vht|
+!i113 1
+R17
+R18
+Amux_2x1_arch
+R7
+R8
+DEx4 work 19 mux_2x1_vhd_vec_tst 0 22 WEhhc8h:Z:VeMecS6AVf80
+!i122 7
+l49
+L34 227
+V[nNN=PInFImADZ>mi<kg]1
+!s100 OgC^oi]6oXgk^<ZS1nSV43
+R12
+32
+R30
+!i10b 1
+R31
+R35
+R36
+!i113 1
+R17
+R18
