@@ -1,0 +1,515 @@
+Analysis & Synthesis report for CPU_EK
+Tue Mar 08 17:54:09 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "ALU:COMP_ALU|SUBTRATOR_8BITS:OP2|SOMADOR_8BITS:RESULTADO"
+ 11. Port Connectivity Checks: "ALU:COMP_ALU|SOMADOR_8BITS:OP1"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++-----------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status       ; Successful - Tue Mar 08 17:54:09 2022       ;
+; Quartus Prime Version             ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                     ; CPU_EK                                      ;
+; Top-level Entity Name             ; CPU_EK                                      ;
+; Family                            ; Arria II GX                                 ;
+; Logic utilization                 ; N/A                                         ;
+;     Combinational ALUTs           ; 8                                           ;
+;     Memory ALUTs                  ; 0                                           ;
+;     Dedicated logic registers     ; 8                                           ;
+; Total registers                   ; 8                                           ;
+; Total pins                        ; 70                                          ;
+; Total virtual pins                ; 0                                           ;
+; Total block memory bits           ; 0                                           ;
+; DSP block 18-bit elements         ; 0                                           ;
+; Total GXB Receiver Channel PCS    ; 0                                           ;
+; Total GXB Receiver Channel PMA    ; 0                                           ;
+; Total GXB Transmitter Channel PCS ; 0                                           ;
+; Total GXB Transmitter Channel PMA ; 0                                           ;
+; Total PLLs                        ; 0                                           ;
+; Total DLLs                        ; 0                                           ;
++-----------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                           ; CPU_EK             ; CPU_EK             ;
+; Family name                                                                     ; Arria II GX        ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/ALU.vhd                 ;         ;
+; BANCO_REGISTRADORES.vhd          ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/BANCO_REGISTRADORES.vhd ;         ;
+; BRANCH_HELPER.vhd                ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/BRANCH_HELPER.vhd       ;         ;
+; CONTADOR_SINCRONO.vhd            ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/CONTADOR_SINCRONO.vhd   ;         ;
+; CPU_EK.vhd                       ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd              ;         ;
+; EXTENSOR_2X8.vhd                 ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/EXTENSOR_2X8.vhd        ;         ;
+; EXTENSOR_4X8.vhd                 ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/EXTENSOR_4X8.vhd        ;         ;
+; DIV_INSTRUCAO.vhd                ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/DIV_INSTRUCAO.vhd       ;         ;
+; MUX_2X1.vhd                      ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/MUX_2X1.vhd             ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/PC.vhd                  ;         ;
+; RAM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/RAM.vhd                 ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/ROM.vhd                 ;         ;
+; SOMADOR_8BITS.vhd                ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/SOMADOR_8BITS.vhd       ;         ;
+; SUBTRATOR_8BITS.vhd              ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/SUBTRATOR_8BITS.vhd     ;         ;
+; UNIDADE_DE_CONTROLE.vhd          ; yes             ; User VHDL File  ; C:/Users/Eduardo/Documents/New Folder/UNIDADE_DE_CONTROLE.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++-----------------------------------------------+-------------+
+; Resource                                      ; Usage       ;
++-----------------------------------------------+-------------+
+; Estimated ALUTs Used                          ; 8           ;
+;     -- Combinational ALUTs                    ; 8           ;
+;     -- Memory ALUTs                           ; 0           ;
+;     -- LUT_REGs                               ; 0           ;
+; Dedicated logic registers                     ; 8           ;
+;                                               ;             ;
+; Estimated ALUTs Unavailable                   ; 0           ;
+;     -- Due to unpartnered combinational logic ; 0           ;
+;     -- Due to Memory ALUTs                    ; 0           ;
+;                                               ;             ;
+; Total combinational functions                 ; 8           ;
+; Combinational ALUT usage by number of inputs  ;             ;
+;     -- 7 input functions                      ; 0           ;
+;     -- 6 input functions                      ; 0           ;
+;     -- 5 input functions                      ; 0           ;
+;     -- 4 input functions                      ; 0           ;
+;     -- <=3 input functions                    ; 8           ;
+;                                               ;             ;
+; Combinational ALUTs by mode                   ;             ;
+;     -- normal mode                            ; 1           ;
+;     -- extended LUT mode                      ; 0           ;
+;     -- arithmetic mode                        ; 7           ;
+;     -- shared arithmetic mode                 ; 0           ;
+;                                               ;             ;
+; Estimated ALUT/register pairs used            ; 8           ;
+;                                               ;             ;
+; Total registers                               ; 8           ;
+;     -- Dedicated logic registers              ; 8           ;
+;     -- I/O registers                          ; 0           ;
+;     -- LUT_REGs                               ; 0           ;
+;                                               ;             ;
+;                                               ;             ;
+; I/O pins                                      ; 70          ;
+;                                               ;             ;
+; DSP block 18-bit elements                     ; 0           ;
+;                                               ;             ;
+; Maximum fan-out node                          ; CLOCK~input ;
+; Maximum fan-out                               ; 8           ;
+; Total fan-out                                 ; 109         ;
+; Average fan-out                               ; 0.70        ;
++-----------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++-----------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name       ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------+-------------------+--------------+
+; |CPU_EK                                 ; 8 (0)               ; 8 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 70   ; 0            ; |CPU_EK                                    ; CPU_EK            ; work         ;
+;    |CONTADOR_SINCRONO:COMP_CONTADOR_PC| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |CPU_EK|CONTADOR_SINCRONO:COMP_CONTADOR_PC ; CONTADOR_SINCRONO ; work         ;
+;    |PC:COMP_PC|                         ; 1 (1)               ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |CPU_EK|PC:COMP_PC                         ; PC                ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++---------------------------------------------------------------+---------------------------------------------+
+; Register name                                                 ; Reason for Removal                          ;
++---------------------------------------------------------------+---------------------------------------------+
+; RAM:COMP_RAM|S[0..7]                                          ; Stuck at GND due to stuck port clock_enable ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~11 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~12 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~13 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~14 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~15 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~16 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~17 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~18 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~19 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~20 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~21 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~22 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~23 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~24 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~25 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~26 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~27 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~28 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~29 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~30 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~31 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~32 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~33 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~34 ; Lost fanout                                 ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~35 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~36 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~37 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~38 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~39 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~40 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~41 ; Stuck at GND due to stuck port data_in      ;
+; BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG~42 ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 40                        ;                                             ;
++---------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 8     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:COMP_ALU|SUBTRATOR_8BITS:OP2|SOMADOR_8BITS:RESULTADO" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:COMP_ALU|SOMADOR_8BITS:OP1" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriaii_ff            ; 8                           ;
+;     plain             ; 8                           ;
+; boundary_port         ; 70                          ;
+; stratixiv_lcell_comb  ; 10                          ;
+;     arith             ; 7                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 3                           ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.60                        ;
+; Average LUT depth     ; 1.22                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Mar 08 17:54:02 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU_EK -c CPU_EK
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 34
+    Info (12023): Found entity 1: ALU File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file banco_registradores.vhd
+    Info (12022): Found design unit 1: BANCO_REGISTRADORES-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/BANCO_REGISTRADORES.vhd Line: 21
+    Info (12023): Found entity 1: BANCO_REGISTRADORES File: C:/Users/Eduardo/Documents/New Folder/BANCO_REGISTRADORES.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file branch_helper.vhd
+    Info (12022): Found design unit 1: BRANCH_HELPER-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/BRANCH_HELPER.vhd Line: 18
+    Info (12023): Found entity 1: BRANCH_HELPER File: C:/Users/Eduardo/Documents/New Folder/BRANCH_HELPER.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file contador_sincrono.vhd
+    Info (12022): Found design unit 1: CONTADOR_SINCRONO-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/CONTADOR_SINCRONO.vhd Line: 20
+    Info (12023): Found entity 1: CONTADOR_SINCRONO File: C:/Users/Eduardo/Documents/New Folder/CONTADOR_SINCRONO.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file cpu_ek.vhd
+    Info (12022): Found design unit 1: CPU_EK-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 27
+    Info (12023): Found entity 1: CPU_EK File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file extensor_2x8.vhd
+    Info (12022): Found design unit 1: EXTENSOR_2X8-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/EXTENSOR_2X8.vhd Line: 17
+    Info (12023): Found entity 1: EXTENSOR_2X8 File: C:/Users/Eduardo/Documents/New Folder/EXTENSOR_2X8.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file extensor_4x8.vhd
+    Info (12022): Found design unit 1: EXTENSOR_4X8-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/EXTENSOR_4X8.vhd Line: 17
+    Info (12023): Found entity 1: EXTENSOR_4X8 File: C:/Users/Eduardo/Documents/New Folder/EXTENSOR_4X8.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file div_instrucao.vhd
+    Info (12022): Found design unit 1: DIV_INSTRUCAO-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/DIV_INSTRUCAO.vhd Line: 19
+    Info (12023): Found entity 1: DIV_INSTRUCAO File: C:/Users/Eduardo/Documents/New Folder/DIV_INSTRUCAO.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2x1.vhd
+    Info (12022): Found design unit 1: MUX_2X1-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/MUX_2X1.vhd Line: 18
+    Info (12023): Found entity 1: MUX_2X1 File: C:/Users/Eduardo/Documents/New Folder/MUX_2X1.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/PC.vhd Line: 19
+    Info (12023): Found entity 1: PC File: C:/Users/Eduardo/Documents/New Folder/PC.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: RAM-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/RAM.vhd Line: 20
+    Info (12023): Found entity 1: RAM File: C:/Users/Eduardo/Documents/New Folder/RAM.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: ROM-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/ROM.vhd Line: 28
+    Info (12023): Found entity 1: ROM File: C:/Users/Eduardo/Documents/New Folder/ROM.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file somador_8bits.vhd
+    Info (12022): Found design unit 1: SOMADOR_8BITS-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/SOMADOR_8BITS.vhd Line: 20
+    Info (12023): Found entity 1: SOMADOR_8BITS File: C:/Users/Eduardo/Documents/New Folder/SOMADOR_8BITS.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file subtrator_8bits.vhd
+    Info (12022): Found design unit 1: SUBTRATOR_8BITS-BEHAVIOR File: C:/Users/Eduardo/Documents/New Folder/SUBTRATOR_8BITS.vhd Line: 19
+    Info (12023): Found entity 1: SUBTRATOR_8BITS File: C:/Users/Eduardo/Documents/New Folder/SUBTRATOR_8BITS.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file unidade_de_controle.vhd
+    Info (12022): Found design unit 1: UNIDADE_DE_CONTROLE-LOGIC File: C:/Users/Eduardo/Documents/New Folder/UNIDADE_DE_CONTROLE.vhd Line: 28
+    Info (12023): Found entity 1: UNIDADE_DE_CONTROLE File: C:/Users/Eduardo/Documents/New Folder/UNIDADE_DE_CONTROLE.vhd Line: 13
+Info (12127): Elaborating entity "CPU_EK" for the top level hierarchy
+Info (12128): Elaborating entity "CONTADOR_SINCRONO" for hierarchy "CONTADOR_SINCRONO:COMP_CONTADOR_PC" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 140
+Info (12128): Elaborating entity "PC" for hierarchy "PC:COMP_PC" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 141
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:COMP_ROM" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 142
+Info (12128): Elaborating entity "DIV_INSTRUCAO" for hierarchy "DIV_INSTRUCAO:COMP_DIVISAO_INSTRUCAO" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 143
+Info (12128): Elaborating entity "UNIDADE_DE_CONTROLE" for hierarchy "UNIDADE_DE_CONTROLE:COMP_UNIDADE_DE_CONTROLE" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 144
+Info (12128): Elaborating entity "BANCO_REGISTRADORES" for hierarchy "BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 145
+Info (12128): Elaborating entity "EXTENSOR_2X8" for hierarchy "EXTENSOR_2X8:COMP_EXTENSOR_2X8" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 146
+Info (12128): Elaborating entity "MUX_2X1" for hierarchy "MUX_2X1:COMP_MUX_1" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 147
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:COMP_ALU" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 148
+Warning (10631): VHDL Process Statement warning at ALU.vhd(68): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at ALU.vhd(68): inferring latch(es) for signal or variable "IN_BRANCH_HELPER", which holds its previous value in one or more paths through the process File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 68
+Info (10041): Inferred latch for "IN_BRANCH_HELPER" at ALU.vhd(68) File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 68
+Info (10041): Inferred latch for "Z" at ALU.vhd(68) File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 68
+Info (12128): Elaborating entity "BRANCH_HELPER" for hierarchy "ALU:COMP_ALU|BRANCH_HELPER:BH" File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 64
+Info (12128): Elaborating entity "SOMADOR_8BITS" for hierarchy "ALU:COMP_ALU|SOMADOR_8BITS:OP1" File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 65
+Info (12128): Elaborating entity "SUBTRATOR_8BITS" for hierarchy "ALU:COMP_ALU|SUBTRATOR_8BITS:OP2" File: C:/Users/Eduardo/Documents/New Folder/ALU.vhd Line: 66
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:COMP_RAM" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 149
+Info (12128): Elaborating entity "EXTENSOR_4X8" for hierarchy "EXTENSOR_4X8:COMP_EXTENSOR_4X8" File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 151
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "BANCO_REGISTRADORES:COMP_BANCO_REGISTRADORES|MEM_BANCO_REG" is uninferred due to inappropriate RAM size File: C:/Users/Eduardo/Documents/New Folder/BANCO_REGISTRADORES.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ROM_OUT[0]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[1]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[2]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[3]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[4]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[5]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[6]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "ROM_OUT[7]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 15
+    Warning (13410): Pin "OPCODE_OUT[0]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 16
+    Warning (13410): Pin "OPCODE_OUT[1]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 16
+    Warning (13410): Pin "OPCODE_OUT[2]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 16
+    Warning (13410): Pin "OPCODE_OUT[3]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 16
+    Warning (13410): Pin "RS_OUT[0]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 17
+    Warning (13410): Pin "RS_OUT[1]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 17
+    Warning (13410): Pin "RT_OUT[0]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 17
+    Warning (13410): Pin "RT_OUT[1]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 17
+    Warning (13410): Pin "ADDRESS_OUT[0]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 18
+    Warning (13410): Pin "ADDRESS_OUT[1]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 18
+    Warning (13410): Pin "ADDRESS_OUT[2]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 18
+    Warning (13410): Pin "ADDRESS_OUT[3]" is stuck at VCC File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 18
+    Warning (13410): Pin "R_A_OUT[0]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[1]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[2]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[3]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[4]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[5]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[6]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_A_OUT[7]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[0]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[1]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[2]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[3]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[4]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[5]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[6]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "R_B_OUT[7]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 19
+    Warning (13410): Pin "ALU_RESULT_OUT[0]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[1]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[2]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[3]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[4]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[5]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[6]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_RESULT_OUT[7]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 20
+    Warning (13410): Pin "ALU_OVERFLOW_OUT" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 21
+    Warning (13410): Pin "RAM_OUT[0]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[1]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[2]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[3]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[4]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[5]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[6]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "RAM_OUT[7]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 22
+    Warning (13410): Pin "MUX_2_OUT[0]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[1]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[2]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[3]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[4]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[5]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[6]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+    Warning (13410): Pin "MUX_2_OUT[7]" is stuck at GND File: C:/Users/Eduardo/Documents/New Folder/CPU_EK.vhd Line: 23
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 24 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 69 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Tue Mar 08 17:54:09 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
+
+
