@@ -5,16 +5,16 @@
 --		  ------------------------
 --      | CODIGO | NOME | TIPO |
 --      |--------|------|------|
---		  | 0000   | ADD	|	R   |
--- 	  | 0001   | ADDI	|  I   |
--- 	  | 0010   | SUB	|  R   |
--- 	  | 0011   | SUBI |  I   |
--- 	  | 0100   | LW	|  I   |
--- 	  | 0101   | SW	|  I   |
--- 	  | 0110   | LI	|  I   |
--- 	  | 0111   | BEQ	|  J   |
--- 	  | 1000   | IF	|  J   |
--- 	  | 1001   | J		|  J   |
+--      | 0000   | ADD	|  R   |
+-- 	| 0001   | ADDI	|  I   |
+-- 	| 0010   | SUB	|  R   |
+-- 	| 0011   | SUBI |  I   |
+-- 	| 0100   | LW	|  I   |
+-- 	| 0101   | SW	|  I   |
+-- 	| 0110   | LI	|  I   |
+-- 	| 0111   | BEQ	|  J   |
+-- 	| 1000   | IF	|  J   |
+-- 	| 1001   | J	|  J   |
 -----------------------------------------------------------
 
 LIBRARY IEEE;
@@ -23,12 +23,12 @@ USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY ALU IS
 	PORT(
-			CLOCK		      : IN STD_LOGIC;
-			OP 		      : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			A,B		      : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-			S		         : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-			Z,OVERFLOW     : OUT STD_LOGIC
-		);
+		CLOCK	   : IN STD_LOGIC;
+		OP 	   : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		A,B	   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		S          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		Z,OVERFLOW : OUT STD_LOGIC
+	);
 END ENTITY;
 	
 ARCHITECTURE BEHAVIOR OF ALU IS
