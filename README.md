@@ -13,12 +13,18 @@
     <br />
     <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/relatorio">Relatório</a>
     |
-    <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/apresentacao">Slides</a>
+    <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/blob/main/apresentacao/Apresenta%C3%A7%C3%A3o.pdf">Slides</a>
     |
     <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/CPU_EK">Processador</a>
   </p>
+  
+  <h1 align="center">Datapath da CPU EK</h1>
+  <p align="center">
+    <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/relatorio">
+      <img src="https://raw.githubusercontent.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/main/datapath/Datapath.png" alt="Datapath Processador EK">
+    </a>
+  </p>
 </p>
-<br />
 
 ## Como executar o projeto da CPU EK?
 
