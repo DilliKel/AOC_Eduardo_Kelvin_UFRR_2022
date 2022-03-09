@@ -20,8 +20,15 @@
   
   <h1 align="center">Datapath da CPU EK</h1>
   <p align="center">
-    <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/relatorio">
+    <a href="">
       <img src="https://raw.githubusercontent.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/main/datapath/Datapath.png" alt="Datapath Processador EK">
+    </a>
+  </p>
+  
+  <h1 align="center">Especificações da IDE Quartus Prime</h1>
+  <p align="center">
+    <a href="">
+      <img src="https://raw.githubusercontent.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/main/tests/Specifications.png" alt="Especificações da IDE Quartus">
     </a>
   </p>
 </p>
