@@ -10,8 +10,6 @@
     Este é um projeto de um processador de 8 bits, com arquitetura RISC, baseado no processador MIPS.
     Ele foi desenvolvido na IDE Quartus Prime, da Intel.
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/relatorio">Relatório</a>
     |
