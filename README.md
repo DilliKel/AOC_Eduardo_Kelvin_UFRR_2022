@@ -18,8 +18,9 @@
     <a href="https://github.com/ed-henrique/AOC_Eduardo_Kelvin_UFRR_2022/tree/main/CPU_EK">Processador</a>
   </p>
 </p>
+<br />
 
-## Como executar o projeto?
+## Como executar o projeto da CPU EK?
 
 1. Baixar e instalar o Quartus Prime Lite (De preferência a versão 20.1, que fornece o modelsim gratuitamente)
 2. Clonar a pasta CPU_EK do repositório
