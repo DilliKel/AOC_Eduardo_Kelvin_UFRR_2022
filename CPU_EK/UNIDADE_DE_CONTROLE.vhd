@@ -112,7 +112,7 @@ BEGIN
                 MEMWRITE <= '0';
                 ALUSRC   <= '0';
                 REGWRITE <= '0';
-				WHEN IF_OP =>
+	    WHEN IF_OP =>
                 ALUOP    <= IF_OP;
                 JUMP     <= '0';
                 BRANCH   <= '0';
